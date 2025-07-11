@@ -1,5 +1,5 @@
-class BirhhdayModel {
-  BirhhdayModel({
+class BirthdayModel {
+  BirthdayModel({
     required this.id,
     required this.dataset,
     required this.status,
@@ -19,8 +19,8 @@ class BirhhdayModel {
   final dynamic totalCount;
   final dynamic orderId;
 
-  factory BirhhdayModel.fromJson(Map<String, dynamic> json) {
-    return BirhhdayModel(
+  factory BirthdayModel.fromJson(Map<String, dynamic> json) {
+    return BirthdayModel(
       id: json["\u0024id"],
       dataset: json["dataset"] == null ? null : Dataset.fromJson(json["dataset"]),
       status: json["status"],
@@ -75,6 +75,7 @@ class ValueValue {
     required this.designation,
     required this.name,
     required this.day,
+    required this.imagePath,
   });
 
   final String? id;
@@ -83,6 +84,7 @@ class ValueValue {
   final String? designation;
   final String? name;
   final String? day;
+  final String? imagePath;
 
   factory ValueValue.fromJson(Map<String, dynamic> json) {
     return ValueValue(
@@ -92,6 +94,7 @@ class ValueValue {
       designation: json["designation"],
       name: json["name"],
       day: json["day"],
+      imagePath: json["profilePath"],
     );
   }
 }

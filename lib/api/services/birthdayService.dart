@@ -12,10 +12,10 @@ import 'package:birhthday_display/api/services/apiservice.dart';
 
 class Birthdayservice {
   final Apiservice _apiservice = Apiservice();
-  Future<BirhhdayModel> getBirhday() async {
+  Future<BirthdayModel> getBirhday() async {
     try {
       final response = await _apiservice.get("/Generic/GetBirthday");
-      return BirhhdayModel.fromJson(response.data);
+      return BirthdayModel.fromJson(response.data);
     } catch (c) {
       rethrow;
     }
